@@ -1,0 +1,137 @@
+// Buttons ====================================================================
+
+.btn {
+  // font-family: @headings-font-family;
+  letter-spacing: 1px;
+  border-radius: 0;
+  // text-transform: uppercase;
+
+  text-align: center;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  font-family: Arial, Helvetica, Sans-serif;
+
+
+}
+
+.btn-hero{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: @headings-font-family;
+}
+
+.btn-default:hover {
+  background-color: @brand-primary;
+  border-color: @brand-primary;
+  color: white;
+}
+
+.button-variant(@color; @background; @border) {
+  color: @color;
+  background-color: @background;
+  border-color: @border;
+  border-width: 1px;
+
+  &:focus,
+  &.focus {
+    color: @color;
+    background-color: darken(@background, 10%);
+        border-color: darken(@border, 25%);
+  }
+  &:hover {
+    color: @color;
+    background-color: darken(@background, 10%);
+        border-color: darken(@border, 10%);
+  }
+  &:active,
+  &.active,
+  .open > .dropdown-toggle& {
+    color: @color;
+    background-color: darken(@background, 10%);
+        border-color: darken(@border, 10%);
+
+    &:hover,
+    &:focus,
+    &.focus {
+      color: @color;
+      background-color: darken(@background, 17%);
+          border-color: darken(@border, 17%);
+    }
+  }
+  &:active,
+  &.active,
+  .open > .dropdown-toggle& {
+    background-image: none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &.focus,
+    &:active,
+    &.active {
+      background-color: @background;
+          border-color: @border;
+    }
+  }
+
+  .badge {
+    color: @background;
+    background-color: @color;
+  }
+}
+
+.btn-rounded {
+  border-radius: 25px;
+}
+
+.btn-r{
+  border-radius: 3px;
+}
+
+body.btn-rounded .btn {
+  border-radius: 25px !important;
+}
+
+.btn-icon.btn-lg {
+  width: 50px;
+  height: 50px;
+  line-height: 49px;
+  font-size: 24px;
+  min-width: 0;
+}
+.btn-icon.btn-sm {
+  width: 30px;
+  height: 30px;
+  line-height: 29px;
+  font-size: 13px;
+  min-width: 0;
+  padding: 0 0 0 1px!important;
+}
+
+.btn-white,
+.image-bg .btn,
+.image-bg .btn:visited {
+  color: #fff;
+  border-color: #fff;
+  border-width: 2px;
+}
+
+.btn-white:hover,
+.image-bg .btn:hover,
+.image-bg .btn:visited:hover {
+  background: #fff;
+  color: #222;
+}
+
+
+.input-group-btn .btn{
+    border: 1px solid #ccc;
+}
+
+.input-group-btn:last-child > .btn, .input-group-btn:last-child > .btn-group{
+    margin-left: -3px;
+}

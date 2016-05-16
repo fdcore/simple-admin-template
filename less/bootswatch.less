@@ -1,0 +1,229 @@
+// @import url("https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic");
+// @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300&subset=latin,cyrillic");
+
+
+@import "plugins/fira";
+
+a{
+  .transition(all, 0.5s, @easeOutQuart);
+}
+
+legend {
+  font-family: @headings-font-family;
+}
+
+.input-group-addon {
+  font-family: @font-family-sans-serif;
+}
+
+
+.pagination {
+
+  font-family: @headings-font-family;
+
+  &-lg > li > a,
+  &-lg > li > span {
+    padding: 14px 24px;
+  }
+}
+
+.pager {
+
+  font-family: @headings-font-family;
+
+  a {
+    color: @text-color;
+  }
+
+  a:hover {
+    border-color: transparent;
+    color: #fff;
+  }
+
+  .disabled a {
+    border-color: @pager-border;
+  }
+}
+
+// Indicators =================================================================
+
+.close {
+  color: #fff;
+  text-decoration: none;
+  text-shadow: none;
+  opacity: 0.4;
+
+  &:hover,
+  &:focus {
+    color: #fff;
+    opacity: 1;
+  }
+}
+
+.alert {
+  .alert-link {
+    color: @alert-success-text;
+    text-decoration: underline;
+  }
+}
+
+.label {
+  font-family: @headings-font-family;
+  font-weight: normal;
+
+  &-default {
+    border: 1px solid #ddd;
+    color: @text-color;
+  }
+
+}
+
+.badge {
+  padding: 1px 7px 5px;
+  vertical-align: 2px;
+  font-family: @headings-font-family;
+  font-weight: normal;
+}
+
+// Progress bars ==============================================================
+
+// Containers =================================================================
+
+.panel {
+  .box-shadow(none);
+
+  &-default {
+    .close {
+      color: @text-color;
+    }
+  }
+}
+
+.modal {
+  .close {
+    color: @text-color;
+  }
+}
+
+
+.form-control{
+    border: 2px solid #CCC;
+    font-family: @font-family-monospace;
+}
+.form-control:focus{
+    box-shadow: none !important;
+}
+
+.breadcrumb li:before {
+    font-family: 'themify';
+    font-size: 10px;
+}
+
+.mono {
+  font-family: @font-family-monospace;
+}
+
+.panel-block{
+    .h2{
+        margin: 0px;
+    }
+
+    &.panel-info{
+        color: white;
+    }
+
+    .btn{
+        margin-top: 50px;
+    }
+}
+
+// .panel-variant(@border; @heading-text-color; @heading-bg-color; @heading-border) {
+//   border-color: @border;
+//   background-color: @heading-bg-color;
+//
+//   & > .panel-heading {
+//     color: @heading-text-color;
+//     background-color: @heading-bg-color;
+//     border-color: @heading-border;
+//
+//     + .panel-collapse > .panel-body {
+//       border-top-color: @border;
+//     }
+//     .badge {
+//       color: @heading-bg-color;
+//       background-color: @heading-text-color;
+//     }
+//   }
+//   & > .panel-footer {
+//     + .panel-collapse > .panel-body {
+//       border-bottom-color: @border;
+//     }
+//   }
+// }
+
+
+.nav-tabs {
+
+    border-bottom: 0px;
+  > li {
+    > a {
+            text-transform: uppercase;
+        }
+    }
+}
+
+.content-block{
+    .panel;
+    .panel-default;
+    .panel-body;
+
+    border: 1px solid #eee;
+}
+
+.badge.float{
+    position: absolute;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    display: block;
+    top: -15px;
+    right: -15px;
+    border: 1px solid @brand-primary;
+    line-height: 25px;
+}
+
+.badge.middle{
+    position: absolute;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    display: block;
+    top: 6px;
+    right: 10px;
+    border: 1px solid @brand-primary;
+    line-height: 25px;
+}
+
+.badge-info{
+    background: @brand-color-1;
+    border-color: @brand-color-1 !important;
+}
+
+.modal-backdrop{
+    z-index: 1;
+}
+.modal-dialog{
+    z-index: 2;
+    padding-top: 10vh;
+}
+
+.address-modal .modal-body{
+    padding: 0px;
+}
+
+.dropdown-menu{
+    border: 0px;
+    box-shadow: 0 0 0 1px @brand-primary, 0 25px 58px rgba(0, 0, 0, .3);
+}

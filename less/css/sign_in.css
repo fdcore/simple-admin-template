@@ -1,0 +1,20 @@
+.sign_form {
+  max-width: 400px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.sign_form .panel-title {
+  text-align: center;
+}
+.sign_form .up {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.sign_form .down {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.sign_form .lost {
+  text-align: center;
+  margin-top: 10px;
+}
