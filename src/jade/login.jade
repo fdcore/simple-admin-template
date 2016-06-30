@@ -1,0 +1,25 @@
+doctype html
+html(lang='en')
+  head
+    title Login page
+    include includes/_header.jade
+  body.no-padding
+    .container
+      .row.m-t-100
+        .sign_form
+          .alert.alert-danger
+            button.close(type='button', data-dismiss='alert', aria-label='Close')
+              span(aria-hidden='true') ×
+            |  Неверный логин или пароль
+          .panel.panel-primary
+            .panel-heading
+              h3.panel-title Авторизация
+            .panel-body.no-padding
+              input.form-control.up.input-lg.b-b(type='text', placeholder='Логин')
+              input.form-control.down.input-lg.b-t(type='password', placeholder='Пароль')
+            .panel-footer.no-padding
+              a.btn.btn-info.btn-block.btn-lg(href='#') Войти
+          .lost
+            a.small-link(href='#') Забыли пароль?
+
+    include includes/_footer_default_js.jade

@@ -1,0 +1,107 @@
+doctype html
+html(lang='en')
+  head
+    title Admin dashboard
+    include includes/_header.jade
+  body
+    .container
+      // Static navbar
+      nav.navbar.navbar-default.navbar-fixed-top
+        .container-fluid
+          .navbar-header
+            button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+              span.sr-only Toggle navigation
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+            a.navbar-brand(href='#') Простая Админ Панель 
+          #navbar.navbar-collapse.collapse
+            ul.nav.navbar-nav
+              include includes/_menu.jade
+            form.navbar-form.navbar-left(role='search')
+              .form-group
+                input.form-control(type='text', placeholder='Search')
+              button.btn.btn-default(type='submit') Поиск
+            include includes/_user_nav.jade
+          // /.nav-collapse
+        // /.container-fluid
+      .row.m-t-100
+        .col-md-3
+          .list-group
+            include includes/_left_menu.jade
+        .col-md-9
+          ul.nav.nav-tabs
+            li.active(role='presentation')
+              a(href='#') Home
+            li(role='presentation')
+              a(href='#') Profile
+            li(role='presentation')
+              a(href='#') Messages
+          .panel.panel-default
+            .panel-body
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis tempora omnis quod, modi explicabo deserunt exercitationem eum, iure ipsum fugiat repellat fugit saepe quibusdam corporis aspernatur aliquam. Consectetur, voluptate, quibusdam?
+          .panel.panel-primary
+            .panel-heading.clearfix
+              .pull-left
+                .panel-title(v-text='title') User accounts
+              .pull-right
+                input#search-table.form-control.input-sm(type='text', placeholder='Type for search...')
+            table#table.table.table-hover
+              thead
+                tr
+                  th Name
+                  th Email
+                  th Phone
+                  th.text-right.no-sort Action
+              tbody(ic-confirm='Are you sure?', ic-target='closest tr')
+                tr
+                  td Roberta Castro
+                  td roberta.castro17@example.com
+                  td (315)-234-2688
+                  td.text-right
+                    a.btn.btn-sm.btn-danger(href='#', ic-delete-from='/contacts/0')
+                      | delete  
+                      i.ic-indicator.spin.ion-load-a(style='display: none')
+                tr
+                  td Jean Rhodes
+                  td jean.rhodes29@example.com
+                  td (401)-629-5541
+                  td.text-right
+                    a.btn.btn-sm.btn-danger(href='#', ic-delete-from='/contacts/0')
+                      | delete  
+                      i.ic-indicator.spin.ion-load-a(style='display: none')
+                tr
+                  td Ronnie Cook
+                  td ronnie.cook36@example.com
+                  td (745)-927-4976
+                  td.text-right
+                    a.btn.btn-sm.btn-danger(href='#', ic-delete-from='/contacts/0')
+                      | delete  
+                      i.ic-indicator.spin.ion-load-a(style='display: none')
+                tr
+                  td Jamie Ramirez
+                  td jamie.ramirez60@example.com
+                  td (305)-752-2037
+                  td.text-right
+                    a.btn.btn-sm.btn-danger(href='#', ic-delete-from='/contacts/0')
+                      | delete  
+                      i.ic-indicator.spin.ion-load-a(style='display: none')
+            .panel-footer
+              ul.pagination
+                li
+                  a(href='') 1
+                li
+                  a(href='') 2
+                li
+                  a(href='') 3
+          .panel.panel-info
+            .panel-heading
+              h3.panel-title(v-text='title') Проверка Test
+            .panel-body
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda et voluptatibus nobis odio dolore, qui eius, incidunt hic possimus, non sit sint tenetur fugiat aut porro sed aliquid! Deleniti, doloremque!
+            .panel-footer
+              a.btn.btn-primary(href='#') Сохранить
+
+    include includes/_footer_default_js.jade
+    script(src='plugins/jets/jets.min.js')
+    script(src='js/examples/jets.js')

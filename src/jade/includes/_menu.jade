@@ -1,0 +1,23 @@
+li.active: a(href='index.html') Home
+li: a(href='elements.html') Elements
+li.dropdown
+  a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+    | Layouts 
+    span.caret
+  ul.dropdown-menu
+    li: a(href='index.html') Navbar 1
+    li: a(href='nav2.html') Navbar 2
+    li: a(href='nav3.html') Без бокового меню
+    li: a(href='side.html') Боковая панель
+    li.divider(role='separator')
+    li.dropdown-header Заголовок
+    li: a(href='#') Separated link
+    li: a(href='#') One more separated link
+li.dropdown
+  a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+    | Pages 
+    span.caret
+  ul.dropdown-menu
+    li: a(href='login.html') Login
+    li: a(href='lost.html') Lost password
+    li: a(href='err40x.html') 400x
